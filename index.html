@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién Quiere Ser Ambientalista?</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🌿 ¿Quién Quiere Ser Ambientalista? 🌎</h1>
+        <div class="score">Puntaje: $<span id="score">0</span></div>
+        <div class="timer">Tiempo: <span id="time">30</span>s</div>
+        <div class="progress">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+        <div class="lifelines">
+            <button id="fifty-fifty" onclick="useFiftyFifty()">🌳 50:50</button>
+            <button id="audience" onclick="useAudienceHelp()">👥 Ayuda del Público</button>
+        </div>
+        <div class="question-container">
+            <h2 id="question"></h2>
+        </div>
+        <div class="options" id="options"></div>
+    </div>
+
+    <!-- Modal para finalizar el juego -->
+    <div id="endGameModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>¡Juego Terminado!</h2>
+            <p>Puntaje Final: $<span id="finalScore"></span></p>
+            <p>Respuestas Correctas: <span id="correctAnswers"></span></p>
+            <button onclick="resetGame()">Reiniciar Juego</button>
+        </div>
+    </div>
+
+    <div id="audiencePollModal" class="modal">
+        <div class="modal-content">
+            <h2>Ayuda del Público</h2>
+            <div id="pollResults" class="poll-results"></div>
+            <button onclick="closeAudiencePoll()">Cerrar</button>
+        </div>
+    </div>
+    
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
